@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: ru-RU
-  baseUrl: alonfoll.github.io/Open_GSU_library
+  baseUrl: alonfoll.github.io/Open-GSU-Library
   ignorePatterns:
     - private
     - templates
