@@ -1,17 +1,20 @@
-# Quartz v5
+# [Open GSU Library](https://alonfoll.github.io/Open_GSU_library/)
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Проект создан для хранения и предоставления материалов созданных и используемых студентами ГГУ им. Франциска Скорины
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+## Чтение материалов
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+Для чтения добавленных материалов достаточно зайти на сайт по ссылке "https://alonfoll.github.io/Open_GSU_library/" или кликнуть на заголовок этой справки.
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+Сайт поддерживает просмотр на мобильных устройствах
 
-## Sponsors
+## Добавление материалов
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+1. Сделайте Fork репозитория
+2. Добавьте или исправьте Markdown-файлы в `content/`
+3. Создайте Pull Request
+4. После проверки изменения будут опубликованы
+
+## Доп. Информация
+
+Сайт создан на базе [Quartz v5.0](https://quartz.jzhao.xyz)
