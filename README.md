@@ -18,3 +18,8 @@
 ## Доп. Информация
 
 Сайт создан на базе [Quartz v5.0](https://quartz.jzhao.xyz)
+
+### Лицензии
+
+- Код сайта (Quartz) — [MIT License](./LICENSE-CODE.md)
+- Материалы в `content/` (кроме `index.md`) — [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
