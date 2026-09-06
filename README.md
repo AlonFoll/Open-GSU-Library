@@ -4,6 +4,7 @@
 
 ## Чтение материалов
 
+
 Для чтения добавленных материалов достаточно зайти на сайт по ссылке "https://alonfoll.github.io/Open-GSU-Library/" или кликнуть на заголовок этой справки.
 
 Сайт поддерживает просмотр на мобильных устройствах
@@ -23,3 +24,4 @@
 
 - Код сайта (Quartz) — [MIT License](./LICENSE-QUARTZ.md)
 - Материалы в `content/` (кроме `index.md`) — [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+

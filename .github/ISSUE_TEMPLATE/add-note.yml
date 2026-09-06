@@ -1,0 +1,37 @@
+name: 📝 Добавить заметку
+description: Предложить новую заметку для Open GSU Library
+title: "[NOTE] "
+labels:
+  - contribution
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Добавление заметки
+
+  - type: input
+    id: note-title
+    attributes:
+      label: Название заметки
+      description: Название будущей страницы
+      placeholder: Например, "Собственные значения матрицы"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Текст заметки
+      description: |
+        Можно использовать Markdown и LaTeX.
+        Например: $x \in \mathbb{R}$
+      placeholder: |
+        ## Определение
+
+        Пусть $A$ — квадратная матрица.
+
+        ...
+
+      render: markdown
+    validations:
+      required: true
