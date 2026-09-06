@@ -4,9 +4,7 @@
 
 ## Чтение материалов
 
-<img src=static/qr-alonfoll.github.io_Open-GSU-Library_.png 
-width=100 
-style="border-radius: 15px; float: right">
+
 Для чтения добавленных материалов достаточно зайти на сайт по ссылке "https://alonfoll.github.io/Open-GSU-Library/" или кликнуть на заголовок этой справки.
 
 Сайт поддерживает просмотр на мобильных устройствах
