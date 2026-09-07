@@ -1,15 +1,15 @@
 {
-  "name": "@jackyzha0/quartz",
-  "description": "🌱 publish your digital garden and notes as a website",
+  "name": "open-gsu-library",
+  "description": "notes collection for and from GSU students",
   "private": true,
   "version": "5.0.0",
   "type": "module",
-  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
+  "author": "AlonFoll",
   "license": "MIT",
   "homepage": "https://quartz.jzhao.xyz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackyzha0/quartz.git"
+    "url": "https://github.com/AlonFoll/Open-GSU-Library.git"
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
@@ -19,14 +19,13 @@
     "test": "tsx --test",
     "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
     "install-plugins": "npx tsx ./quartz/plugins/loader/install-plugins.ts",
-    "prebuild": "npm run install-plugins"
+    "prebuild": "pnpm run install-plugins"
   },
   "engines": {
-    "npm": ">=10.9.2",
+    "pnpm": ">=12",
     "node": ">=22"
   },
   "keywords": [
-    "site generator",
     "ssg",
     "digital-garden",
     "markdown",
@@ -131,5 +130,6 @@
     "prettier": "^3.8.1",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2"
-  }
+  },
+  "packageManager": "pnpm@12.3.4"
 }
