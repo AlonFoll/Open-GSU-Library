@@ -1,0 +1,54 @@
+summaries:
+  Unique: values.unique().length
+properties:
+  file.name:
+    displayName: Счёт
+  note.Строка бухгалтерского баланса:
+    displayName: Код строки
+views:
+  - type: table
+    name: Статьи баланса
+    filters:
+      and:
+        - file.inFolder("Бухгалтерский учёт/Бухгалтерский баланс/Статьи баланса")
+    order:
+      - Строка бухгалтерского баланса
+      - file.name
+      - Актив/Пассив
+    sort:
+      - property: Строка бухгалтерского баланса
+        direction: ASC
+    indentProperties: true
+    columnSize:
+      note.Строка бухгалтерского баланса: 65
+      file.name: 337
+  - type: table
+    name: План счетов
+    filters:
+      and:
+        - file.inFolder("Бухгалтерский учёт/План счетов/Синтетические счета")
+    order:
+      - Код счёта
+      - file.name
+      - Субсчета
+    sort:
+      - property: Код счёта
+        direction: DESC
+    columnSize:
+      note.Код счёта: 32
+      note.Субсчета: 143
+      file.name: 337
+  - type: table
+    name: Забалансовые счета
+    filters:
+      and:
+        - file.inFolder("Бухгалтерский учёт/План счетов/Забалансовые счета")
+    order:
+      - Код счёта
+      - file.name
+    sort:
+      - property: Код счёта
+        direction: ASC
+    columnSize:
+      note.Код счёта: 49
+      file.name: 269
