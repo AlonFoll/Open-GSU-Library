@@ -1,27 +1,67 @@
 summaries:
   Unique: values.unique().length
+  Empty: values.filter(value.isType("null")).length
+  Average: values.mean().round(2)
+formulas:
+  Сторона баланса: |-
+    if(formula["Раздел баланса"] == "-", "-",
+    if(formula["Раздел баланса"].contains("актив"), 
+    "Актив", "Пассив")
+    )
+  Раздел баланса: |+
+    if(!file.hasProperty("Строка бухгалтерского баланса"), "-",
+
+    if(file.properties["Строка бухгалтерского баланса"] < 200, 
+    "1. Долгосрочные активы", 
+
+    if(file.properties["Строка бухгалтерского баланса"] < 300,
+    "2. Краткосрочные активы",
+
+    if(file.properties["Строка бухгалтерского баланса"] < 500,
+    "3. Собственный капитал",
+
+    if(file.properties["Строка бухгалтерского баланса"] < 600,
+    "4. Долгосрочные обязательства",
+
+    if(file.properties["Строка бухгалтерского баланса"] < 700,
+    "5. Краткосрочные обязательства",
+
+    "*"))))))
+
+  Родительский счёт: (file.properties["Строка бухгалтерского баланса"]/10).floor()
+  Соответствует стороне баланса: |-
+    formula["Сторона баланса"] == if(this.file.name == "Актив баланса",
+    "Актив", "Пассив"
+    )
 properties:
   file.name:
     displayName: Счёт
   note.Строка бухгалтерского баланса:
     displayName: Код строки
+  formula.Сторона баланса:
+    displayName: Сторона баланса
 views:
   - type: table
     name: Статьи баланса
     filters:
       and:
         - file.inFolder("Бухгалтерский учёт/Бухгалтерский баланс/Статьи баланса")
+        - formula["Соответствует стороне баланса"]
+    groupBy:
+      property: formula.Родительский счёт
+      direction: ASC
     order:
       - Строка бухгалтерского баланса
       - file.name
-      - Актив/Пассив
+      - formula.Раздел баланса
     sort:
       - property: Строка бухгалтерского баланса
         direction: ASC
+    summaries: {}
     indentProperties: true
     columnSize:
       note.Строка бухгалтерского баланса: 65
-      file.name: 337
+      file.name: 458
   - type: table
     name: План счетов
     filters:
@@ -33,10 +73,9 @@ views:
       - Субсчета
     sort:
       - property: Код счёта
-        direction: DESC
+        direction: ASC
     columnSize:
       note.Код счёта: 32
-      note.Субсчета: 143
       file.name: 337
   - type: table
     name: Забалансовые счета
